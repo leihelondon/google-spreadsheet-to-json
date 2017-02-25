@@ -1,0 +1,15 @@
+{
+  "name": "google-spreadsheet-to-json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lei He",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "google-spreadsheet": "^2.0.3"
+  }
+}
