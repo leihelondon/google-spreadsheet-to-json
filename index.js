@@ -19,6 +19,7 @@ function getObject(keys, values) {
             obj[key] = values[i];
         }
     }
+
     return obj;
 }
 
@@ -34,11 +35,12 @@ doc.useServiceAccountAuthAsync(creds).then(() => {
 .then((info) => {
     const sheet = info.worksheets[config.sheet_number];
     Promise.promisifyAll(sheet);
+
     return sheet.getCellsAsync({
         'min-col': 1,
         'max-col': 2,
         'return-empty': true
-    })
+    });
 })
 .then((cells) => {
     const keys = getColumnValues(cells, 1);
@@ -49,5 +51,3 @@ doc.useServiceAccountAuthAsync(creds).then(() => {
 .catch((err) => {
     console.log(err);
 });
-
-
